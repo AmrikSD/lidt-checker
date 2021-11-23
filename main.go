@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
-  "bytes"
+	"bytes"
 
 	"github.com/PuerkitoBio/goquery"
 )
