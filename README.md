@@ -1,1 +1,1 @@
-# auto-scraper
+# japan-tourism
