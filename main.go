@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 	"bytes"
-
+  "github.com/aws/aws-lambda-go/lambda"
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -33,9 +33,13 @@ type DiscordMessage struct {
 	AvatarURL string `json:"avatar_url"`
 }
 
-func main(){
+func handler(){
   status:= getJapanStatus()
   updateDiscord(status)
+}
+
+func main(){
+  lambda.Start(handler)
 }
 
 func getJapanStatus() string{
