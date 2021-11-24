@@ -113,11 +113,6 @@ func updateDiscord(status string) {
 			},
 		},
 
-
-
-
-
-    
 		Username:  username,
 		AvatarURL: avatarURL,
 	}
