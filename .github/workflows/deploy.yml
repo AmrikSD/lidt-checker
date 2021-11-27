@@ -23,9 +23,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build the go binary.
-        run: |
-          ls
-          echo building go binary test
-          go build .
-          ls
-          
+        run: go build .
+        
+      - name: Deploy to AWS
+        run: sam deploy
+      
