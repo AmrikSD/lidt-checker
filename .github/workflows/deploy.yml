@@ -13,18 +13,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install go
-        uses: actions/setup-go@v2
+    
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
       
-      - name: Setup AWS SAM CLI
-        uses: aws-actions/setup-sam@v1
-        
-      - name: checkout code
-        uses: actions/checkout@v2
+      - uses: aws-actions/setup-sam@v1
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
 
       - name: Build the go binary.
         run: go build .
         
       - name: Deploy to AWS
-        run: sam deploy
+        run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
       
