@@ -1,4 +1,4 @@
-module japan-tourism
+module lidt-checker
 
 go 1.16
 

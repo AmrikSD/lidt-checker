@@ -3,34 +3,34 @@ Transform: AWS::Serverless-2016-10-31
 Parameters: 
   AuthorIcon:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/AUTHOR_ICON
+    Default: /lidt-checker/AUTHOR_ICON
   AuthorName:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/AUTHOR_NAME
+    Default: /lidt-checker/AUTHOR_NAME
   AuthorURL:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/AUTHOR_URL
+    Default: /lidt-checker/AUTHOR_URL
   AvatarURL:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/AVATAR_URL
+    Default: /lidt-checker/AVATAR_URL
   MessageColour:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/MESSAGE_COLOUR
+    Default: /lidt-checker/MESSAGE_COLOUR
   MessageLink:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/MESSAGE_LINK
+    Default: /lidt-checker/MESSAGE_LINK
   WebhookURL:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/WEBHOOK_URL
+    Default: /lidt-checker/WEBHOOK_URL
   WebhookUsername:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /japan-tourism/WEBHOOK_USERNAME
+    Default: /lidt-checker/WEBHOOK_USERNAME
 
 Resources:
   JapanTourismLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: japan-tourism
+      Handler: lidt-checker
       Runtime: go1.x
       MemorySize: 1024
       Environment:

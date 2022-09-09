@@ -9,13 +9,13 @@ RUN go mod download
 COPY *.go ./
 RUN go build .
 
-CMD ["./japan-tourism"]
+CMD ["./lidt-checker"]
 
 
 FROM alpine:latest AS prod
 
 WORKDIR /app
-COPY --from=build /app/japan-tourism ./
+COPY --from=build /app/lidt-checker ./
 
-CMD ["./japan-tourism"]
+CMD ["./lidt-checker"]
 

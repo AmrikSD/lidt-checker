@@ -2,9 +2,9 @@ version = 0.1
 [default]
 [default.deploy]
 [default.deploy.parameters]
-stack_name = "japan-tourism-stack"
+stack_name = "lidt-checker-stack"
 s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-f400a512c2rt"
-s3_prefix = "japan-tourism-stack"
+s3_prefix = "lidt-checker-stack"
 region = "eu-west-2"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
