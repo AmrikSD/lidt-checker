@@ -100,7 +100,7 @@ func getLidtTests(centre string) []Field {
 				Name:  location,
 				Value: time,
 			})
-		} else if strings.Contains(testOption.Text(), "Contains") {
+		} else if strings.Contains(testOption.Text(), "Choose") {
 			testInWantedLocation = append(testInWantedLocation, Field{
 				Name:  "Tolworth (maybe)",
 				Value: "Unknown",
