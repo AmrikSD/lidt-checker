@@ -6,7 +6,7 @@ Parameters:
     Default: /lidt-checker/WEBHOOK_URL
   Environment:
     Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: /lidt-checker/ENVIRONMENT
+    Default: /lidt-checker/APP_ENV
 
 Resources:
   JapanTourismLambda:
