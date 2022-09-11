@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -55,7 +56,10 @@ type DiscordMessage struct {
 func handler() {
 	availableTests := getLidtTests("Tolworth (London)")
 	if len(availableTests) > 0 {
+		fmt.Printf("%v tests found, pinging discord", len(availableTests))
 		updateDiscord(availableTests)
+	} else {
+		fmt.Print("No tests found")
 	}
 }
 
